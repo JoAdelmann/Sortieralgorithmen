@@ -10,9 +10,40 @@
    </head>
    
    <body>
-   
-          <section class="topSection" id="animFrame">
-          <div class="box" id="box0"  > <div class="barText" id="barText0">1</div> </div>
+       <div class="topSection">
+       <ul class="navigation">
+           <li><a href="index.html">Home</a></li>
+           <li><a href="vlab.html">Reset</a></li>
+           <li><a href="#" title="Randomize the array" onclick="randomizeButton();return false;">Würfeln</a></li>
+           <li><a href="#" title="Select an algorithm">Sortieralgorithmen</a>
+               <ul id="subnavigation">
+                   <li><a href="#" onclick="selectAlgo(0); return false;">Bubblesort</a></li>
+                   
+                   <li><a href="#"  onclick="selectAlgo(1); return false;">SelectionSort</a></li>
+                   
+                   <li><a href="#"  onclick="selectAlgo(2); return false;">InsertionSort</a></li>
+                   
+                   <li><a href="#"  onclick="selectAlgo(3); return false;">MergeSort</a></li>
+                   
+                   <li><a href="#"  onclick="selectAlgo(4); return false;">QuickSort</a></li>
+                   
+                   <li><a href="#"  onclick="selectAlgo(5); return false;">RadixSort</a></li>
+
+               </ul>
+           </li>
+           <li id="animateBtn"><a href="#" title="Full Animation" onclick="fullAnimation()">Animieren</a></li>
+           <li id="singleStepBtn"><a href="#" title="Single Step" onclick="singleStep(); return false;">Einzelschritt</a></li>
+           <li id="nextBtn"><a href="#" title="Weiter" onclick="selectNext();return false;">Weiter</a></li>
+       
+       </ul>
+         
+    
+          
+          
+          </div>
+       
+       <div class="middle">
+           <div class="box" id="box0"  > <div class="barText" id="barText0">1</div> </div>
           <div class="box" id="box1"  > <div class="barText" id="barText1">2</div></div>
           <div class="box" id="box2"  > <div class="barText" id="barText2">3</div> </div>
           <div class="box" id="box3"  > <div class="barText" id="barText3">4</div> </div>
@@ -22,13 +53,13 @@
           <div class="box" id="box7"  > <div class="barText" id="barText7">8</div> </div>
           <div class="box" id="box8"  > <div class="barText" id="barText8">9</div> </div>
           <div class="box" id="box9"  > <div class="barText" id="barText9">10</div> </div>
-          </section>
-          <br>
+       </div>
+       
+       
 
-         <input type="button" value="Randomize" onclick="randomizeButton();" />
-         <input type="button" value="Bubblesort" onClick="bubbleSortButton();" />
-         <input type="button" value="next" onClick="next();" />
-       <div id="doneText"></div>
+  <div id="algo">
+       
+   </div>
       
    </body>
 </html>
