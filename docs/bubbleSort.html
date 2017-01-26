@@ -1,7 +1,7 @@
 <html>
     <head>
         
-        <title>Sortieralgorithmen-Johannes Adelmann</title>
+        <title>Bubblesort</title>
         <meta content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../styles/index.css">
@@ -26,6 +26,7 @@
                             <ul class="subnavigation">
                                 <li><a href="mergeSort.html">Mergesort</a></li>
                                 <li><a href="quickSort.html">Quicksort</a></li>
+                                <li><a href="radixSort.html">Radixsort</a></li>
                             </ul> 
                         </li>
                         <li><a href="/docs/vlab.html">Versuchslabor</a></li>
@@ -33,32 +34,35 @@
                     </ul>
                 </nav>
             </div>
-            <div id="topRight"><img src="../images/q3NUsSt.gif" height="100%" width="100%"></div>
+            <div id="topRight">
+                <img src="../images/bubbleSort/bubbleSort.gif" alt="animierter BubbleSort">
+            </div>
         </section>
         
         <section class="middleSection">
             <div class="middleMiddle">
-                <h1>Herzlich Willkommen</h1>
-                <p class="justify">Sortieralgorithmen, auch Sortierverfahren genannt, lassen sich auf der ganzen Welt finden. <br> Sie werden meistens gebraucht, um Dinge in einer gewissen Reihenfolge anzuorden, <br> damit man jene z.B. leichter finden kann. </p>
+                <h1>Der Bubblesort</h1>
+                <p class="justify"> Der Bubblesort ist einer der einfachsten Sortieralgorithmen, <br>
+                obwohl er nicht zu den "Natürlichen" oder "Intuitiven" zählt.</p>
                 <br>
-
-                Ein unsortiertes Array...
+                <h2>Verfahren</h2>
+                <img src="../images/HomeUnsorted3.png" class="image"> <br>
+                <p>Angenommen das obere Array soll nun sortiert werden. <br> 
+                Dazu betrachte man zunächst die Stellen 0 und 1 des Arrays. <br>
                 <br>
-                <img src="../images/HomeUnsorted3.png" class="image"/>
-                <br>
-                
-                <img src="../images/HomeSorted3.png" class="image"/>
-                <br>
-                ...sieht sortiert gleich besser aus.
-                <p></p> <br>
-                <h2>Interessante Fakten</h2>
-                <h3>Selectionsort = Insertionsort</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/pcJHkWwjNl4" frameborder="0" allowfullscreen></iframe> <br>
-                <p></p>
+                In diesem Fall die Werte <span class="greenText"> 10 </span> und <span class="redText"> 4 </span>. <br> <br>
+                Falls <span class="greenText"> 10 </span> größer ist als <span class="redText"> 4 </span> dann 
+                tausche die beiden Elemente:</p> 
+                <img src="../images/bubbleSort/bubbleSortStep1.png" class="image"> <br>
+                <p>Vergleiche nun <span class="greenText"> 10 </span> mit jedem weiteren Element,
+                dann ergibt sich: <br></p> 
+                <img src="../images/bubbleSort/bubbleSortStepTenToRight.png" class="image"> <br>
+                Nun beginnt das Spiel von vorne, solange bis jedes Element sortiert wurde: <br>
+                <img src="../images/HomeSorted3.png" class="image">
             </div>    
         </section>
         
-        <section class="bottomSection">
+        <section class="bottomSection" >
             <div id="copyright">&copy; 2017 - Johannes Adelmann</div>
             <div id="time"></div>
         </section>

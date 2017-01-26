@@ -1,18 +1,16 @@
 <html>
-   
+
    <head>
         <meta content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-       <link rel="stylesheet" href="../styles/vlab.css">
-       <link rel="stylesheet" href="../styles/general.css">
+        <link rel="stylesheet" href="../styles/vlab.css">
+        <link rel="stylesheet" href="../styles/general.css">
        
-      <title>Versuchslabor</title>
+       <title>Versuchslabor</title>
       
-      <script type="text/javascript" src="../scripts/vlab.js" ></script>
-      <script type="text/javascript" src="../scripts/jstorage.js"></script>
+       <script type="text/javascript" src="../scripts/vlab.js" ></script>
+       <script type="text/javascript" src="../scripts/jstorage.js"></script>
        <script type="text/javascript" src="../scripts/Sorter.js"></script>
-       
-
    </head>
    
    <body>
@@ -23,15 +21,18 @@
                    <li><a href="#" onclick="openHelp(); return false;">Hilfe</a></li>
                    <li><a href="#" onclick="clearBtn(); return false;">Clear</a></li>
                    <li><a href="vlab.html">Reset</a></li>
-                   <li><a href="#" title="Randomize the array" onclick="randomizeButton();return false;">Würfeln</a></li>
+                   <li><a href="#" title="Randomize the array" >Würfeln</a>
+                       <ul class="subnavigation">
+                           <li><a href="#" onclick="randomizeButton();return false;">Zufällig</a></li>
+                           <li><a href="#" onclick="invertButton();return false;">Absteigend</a></li>
+                       </ul></li>
                    <li><a href="#" title="Select an algorithm">Sortieralgorithmen</a>
-                       <ul id="subnavigation">
+                       <ul class="subnavigation">
                            <li><a href="#" onclick="selectAlgo(0); return false;">Bubblesort</a></li>
                            <li><a href="#"  onclick="selectAlgo(1); return false;">SelectionSort</a></li>
                            <li><a href="#"  onclick="selectAlgo(2); return false;">InsertionSort</a></li>
                            <li><a href="#"  onclick="selectAlgo(3); return false;">MergeSort</a></li>
                            <li><a href="#"  onclick="selectAlgo(4); return false;">QuickSort</a></li>
-                           <li><a href="#"  onclick="selectAlgo(5); return false;">RadixSort</a></li>
                        </ul>
                    </li>
                    <li id="animateBtn"><a href="#" title="Full Animation" onclick="fullAnimation(); return false;">Animieren</a></li>
@@ -39,11 +40,8 @@
                    <li id="nextBtn"><a href="#" title="Weiter" onclick="selectNext();return false;">Weiter</a></li>
                </ul>
            </div>
-       <div id="topRight"><div id="time"></div></div>  
-    
-          
-          
-          </div>
+           <div id="topRight"><div id="time"></div></div>  
+       </div>
        
        <div class="middle">
            <div id="middleLeft">
@@ -59,7 +57,7 @@
                <div class="box" id="box9"  > <div class="barText" id="barText9">10</div> </div>
            </div>
            <div id="middleRight">
-               <h1 id="algo"></h1>
+               <div id="middleRightTop"><h1 id="algo"></h1></div>
                <div class="sortCode" id="bubbleSort">
                    <pre><code class="outerFor" id="outerFor">for(var i=0; i &lt; array.length; i++ {
   <code id="innerFor">for(var j = 1; j &lt; array.length; j++) {
@@ -98,15 +96,21 @@
 <code id="sortRest">sort(restpartitionen);</code>
 <code id="mergeRest">merge(restpartitionen);</code></pre>
                </div>
+               <div class="sortCode" id="quickSort">
+                   <pre><code id="selectPivot">wähle Pivot-Element aus;</code>
+<code id="greaterThenPivot">größer als Pivot-Element nach rechts;</code>
+<code id="lessThenPivot">kleiner als Pivot-Element nach links;</code>
+<code id="sortLeft">sortiere linken Bereich;</code>
+<code id="sortRight">sortiere rechten Bereich;</code></pre>
+               </div>
                
-               <div id="finished">
-                   <h1>Fertig!</h1>
+               <div id="middleRightBottom">
+                   <div class="feedbackText" id="finished"><h1>Fertig!</h1></div>
+                   <div class="feedbackText" id="sorting"><h1>Sortiere...</h1></div>
                </div>
            </div>
        </div>
        
-       
-
   <div class="bottomSection">
    </div>
       

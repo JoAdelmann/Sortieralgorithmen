@@ -1,3 +1,8 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .topSection {
     position: relative;
     top: 0;
@@ -27,14 +32,38 @@
 
 .bottomSection {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 0%;
     width: 100%;
     height: 15%;
     margin: 0;
     padding: 0;
      background-image: 
        linear-gradient(to bottom, deepskyblue, black);
+    color: darkorange;
+    font: bold 20px/20px sans-serif;
+
+}
+
+#time {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 25%;
+    right: 25%;
+    height: auto;
+
+    vertical-align: middle;
+}
+
+#copyright {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 25%;
+    left: 25%;
+    height: auto;
+
+    vertical-align: middle;
 }
 
 
@@ -55,10 +84,16 @@
     right: 0;
     color: darkorange;
     font: bold 15px/20px sans-serif;
-    text-align: center;
+    text-align: justify;
 }
 
-
+#topRight img {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0%;
+    opacity: 0.20;
+}
 
 #logo {
     height: 100%;
@@ -77,14 +112,6 @@
 
 #logo:hover {
     filter: grayscale(100%);
-}
-
-#time {
-    height: 50%;
-    width: 50%;
-    position: absolute;
-    left: 25%;
-    top: 25%;
 }
 
 .navigation {
@@ -133,7 +160,7 @@
      
 }
 
-#subnavigation {
+.subnavigation {
     left: 0;
     opacity: 0;
     position: absolute;
@@ -143,21 +170,31 @@
     background-color: black;
 }
 
-li:hover ul#subnavigation {
+li:hover ul.subnavigation {
     opacity: 1;
     top: 40px;
     visibility: visible;
 }
 
-#subnavigation li {
+.subnavigation li {
     float: none;
     width: 100%;
 }
 
-#subnavigation a {
+.subnavigation a {
     background-color: black;
 }
 
-#subnavigation a:hover {
+.subnavigation a:hover {
     color: deepskyblue;
+}
+
+.redText{
+    background-color: red;
+    color: black;
+}
+
+.greenText{
+    background-color: green;
+    color: black;
 }

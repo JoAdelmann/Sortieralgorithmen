@@ -43,7 +43,7 @@ function tick() {
     
     var timeString = hourString + ":" + minutesString + ":" + secondsString + " Uhr";
     
-    clock.innerHTML = dayString + ", " + day + "." + month + "." + year + "<br>" + timeString;
+    clock.innerHTML = dayString + ", " + day + "." + month + "." + year + "  |  " + timeString;
     
     window.setTimeout("tick();", 1000);
 }

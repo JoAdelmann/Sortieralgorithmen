@@ -54,17 +54,11 @@ function selectAlgo(n) {
     algoText.innerHTML="";
     
     switch(s) {
-        case 0: selectedAlgo = "BubbleSort"; algoText.innerHTML=selectedAlgo; break;
-            
-        case 1: selectedAlgo = "SelectionSort"; algoText.innerHTML=selectedAlgo; break;
-            
+        case 0: selectedAlgo = "BubbleSort"; algoText.innerHTML=selectedAlgo; break;  
+        case 1: selectedAlgo = "SelectionSort"; algoText.innerHTML=selectedAlgo; break;   
         case 2: selectedAlgo = "InsertionSort"; algoText.innerHTML=selectedAlgo; break;
-            
-        case 3: selectedAlgo = "MergeSort"; algoText.innerHTML=selectedAlgo; break;
-            
+        case 3: selectedAlgo = "MergeSort"; algoText.innerHTML=selectedAlgo; break;  
         case 4: selectedAlgo = "QuickSort"; algoText.innerHTML=selectedAlgo; break;
-            
-        case 5: selectedAlgo = "RadixSort"; algoText.innerHTML=selectedAlgo; break;
     }
     
     
@@ -74,6 +68,7 @@ function fullAnimation() {
     sistebtn.style.visibility="hidden";
     next.style.visibility="hidden";
     sortAnim();
+    Sorter.prototype.selectElem("sorting").style.visibility = "visible";
 }
 
 function singleStep() {
@@ -89,7 +84,6 @@ function selectNext() {
         case "InsertionSort": Sorter.prototype.insertionSortSingleStep(); break;
         case "MergeSort": Sorter.prototype.mergeSortSingleStep(); break;
         case "QuickSort": Sorter.prototype.quickSortSingleStep(); break;
-        case "RadixSort": radixSortSingleStep(); break;
     }
 }
 
@@ -99,6 +93,12 @@ function randomizeButton(){
     printArray(randomizedArray);  
 }
 
+function invertButton() {
+    randomizedArray = Array(10,9,8,7,6,5,4,3,2,1);
+    $.jStorage.set("savedArray", randomizedArray);
+    printArray(randomizedArray);
+}
+
 function sortAnim(time) {
   if(randomizedArray.length == 0) {
     console.log("Empty Array!");   
@@ -106,16 +106,14 @@ function sortAnim(time) {
   else {
       
       switch(selectedAlgo) {
-        case "BubbleSort":  Sorter.prototype.bubbleSortSingleStep(); break;
-        case "SelectionSort":  Sorter.prototype.selectionSortSingleStep(); break;
-        case "InsertionSort":  Sorter.prototype.insertionSortSingleStep(); break;
-        case "MergeSort":  Sorter.prototype.mergeSortSingleStep(); break;
-        case "QuickSort":  Sorter.prototype.quickSortSingleStep(); break;
-        case "RadixSort":  radixSingleStep; break;
-            
+        case "BubbleSort":  Sorter.prototype.bubbleSortSingleStep(); animate = setTimeout(sortAnim, 750); break;
+        case "SelectionSort":  Sorter.prototype.selectionSortSingleStep(); animate = setTimeout(sortAnim, 2000); break;
+        case "InsertionSort":  Sorter.prototype.insertionSortSingleStep(); animate = setTimeout(sortAnim, 750); break;
+        case "MergeSort":  Sorter.prototype.mergeSortSingleStep(); animate = setTimeout(sortAnim, 1000); break;
+        case "QuickSort":  Sorter.prototype.quickSortSingleStep(); animate = setTimeout(sortAnim, 2000); break;       
     }
      
-      animate = setTimeout(sortAnim, 1000);
+      
       
       if(Sorter.prototype.numOfUnsElems == 0) {
           switch(selectedAlgo) {
@@ -123,14 +121,14 @@ function sortAnim(time) {
             case "SelectionSort":  Sorter.prototype.selectionSortArray(randomizedArray); break;
             case "InsertionSort":  Sorter.prototype.insertionSortArray(randomizedArray); break;
             case "MergeSort":  Sorter.prototype.selectionSortArray(randomizedArray); break;
-            case "QuickSort":  quickSortSingleStep; break;
-            case "RadixSort":  radixSingleStep; break;
+            case "QuickSort":  Sorter.prototype.selectionSortArray(randomizedArray); break;
           }
           printArray(randomizedArray);
           if(isSorted(randomizedArray)) {
             console.log("Fertig!");
             clearTimeout(animate);
             Sorter.prototype.selectElem("finished").style.visibility = "visible";
+            Sorter.prototype.selectElem("sorting").style.visibility = "hidden";
           }
       }
   }  
