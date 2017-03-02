@@ -1,7 +1,7 @@
 <html>
     <head>
         
-        <title>Sortieralgorithmen-Johannes Adelmann</title>
+        <title>Bubblesort</title>
         <meta content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../styles/index.css">
@@ -10,10 +10,10 @@
         <script type="text/javascript" src="../scripts/index.js"></script>
     </head>
     <body>
-        <section class="topSection">
+        <header class="topSection">
             <div id="logo"><a href="../docs/index.html"><img src="../images/Logomakr_77PqKi.png"></a></div>
             <div id="topMiddle">
-                <nav class="menu">
+              <nav class="menu">
                     <ul>
                         <li><a href="#">Langsam</a>
                             <ul>
@@ -33,28 +33,28 @@
                     </ul>
                 </nav>
             </div>
-            <div id="topRight"></div>
-        </section>
+            <div id="topRight">
+            </div>
+        </header>
         
         <section class="middleSection">
             <div class="middleMiddle">
-                <h1>Herzlich Willkommen!</h1>
-                <p class="justify">Sortieralgorithmen, auch Sortierverfahren genannt, lassen sich auf der ganzen Welt finden. <br> Sie werden meistens gebraucht, um Dinge in einer gewissen Reihenfolge anzuorden, <br> damit man jene z.B. leichter finden kann. </p>
+                <h1>Der Quicksort</h1>
+                <p class="justify"> Der Quicksort ist der schnellste vergleichende Sortieralgorithmus.</p>
                 <br>
-
-                Ein unsortiertes Array...
-                <br>
-                <img src="../images/insertionSort/step1.PNG" class="image"/>
-                <br>
-                
-                <img src="../images/sorted.png" class="image"/>
-                <br>
-                ...sieht sortiert gleich besser aus.
-                
+                <h2>Verfahren</h2>
+                <img src="../images/quickSort/step1.PNG" class="image"> <br>
+                <p>Angenommen das obere Array soll nun sortiert werden. <br> 
+                Wähle als Pivot-Element die <span class="yellowText"> 5 </span> und sortiere alle Elemente, die kleiner sind nach links, <br> bzw. die größer sind nach rechts. <br>
+                <img src="../images/quickSort/step2.PNG" class="image"> <br>
+                Wähle nun als Pivot-Element die <span class="yellowText"> 3 </span>, bzw. die <span class="yellowText"> 8 </span> und verfahre genauso.</p> 
+                <img src="../images/quickSort/step3.PNG" class="image"> <br>
+                Dann ergibt sich: <br>
+                <img src="../images/sorted.png" class="image">
             </div>    
         </section>
         
-        <footer class="bottomSection">
+        <footer class="bottomSection" >
             <div id="copyright">&copy; 2017 - Johannes Adelmann</div>
             <div id="time"></div>
         </footer>

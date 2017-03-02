@@ -33,7 +33,11 @@ function close() {
 }
 
 function openHelp() {
-    window.open("../docs/help.html", "Hilfe", "width=600,height=600");
+    window.open("../docs/help.html", "Hilfe", "width=700,height=400");
+}
+
+function reloadVlab() {
+    location.reload();
 }
 
 function clearBtn() {
@@ -166,7 +170,6 @@ function printArray(array) {
             currentObj.style.bottom='0px';
             currentObj.style.left = '' + i*45 + 'px';
             currentObj.style.height =  '0px';
-            currentObj.style.borderColor= 'black';
     
             currentText = Sorter.prototype.selectBarText(i);
             currentText.innerHTML = '';
@@ -183,7 +186,6 @@ function printArray(array) {
             cObj.style.left = '' + i*(window.innerWidth/10)*0.7 + 'px';
             cObj.style.bottom='0px';
             cObj.style.textAnchor='bottom';
-            cObj.style.borderColor = 'blue';
             cObjText.innerHTML = '' + currentNumber;
         }
     }
@@ -240,15 +242,17 @@ function tick() {
     var day = today.getDate();
     var month = today.getMonth() + 1;
     var year = today.getFullYear();
-    var hour = today.getHours();
+    var datString = "";
+    var monthString = "";
+ /*   var hour = today.getHours();
     var minutes = today.getMinutes();
     var seconds = today.getSeconds();
-    var dayNumber = today.getDay();
+    */var dayNumber = today.getDay();/*
        
     var hourString = "";
     var minutesString = "";
     var secondsString = "";
-    var dayString = dayArray[dayNumber];
+    */var dayString = dayArray[dayNumber];/*
     
     if(hour < 10) {
         hourString = "0" + hour;
@@ -266,12 +270,21 @@ function tick() {
         secondsString = seconds;
     }
     
-    var timeString = hourString + ":" + minutesString + ":" + secondsString + " Uhr";
+    var timeString = hourString + ":" + minutesString + ":" + secondsString + " Uhr";*/
     
-    clock.innerHTML =dayString + ", " + day + "." + month + "." + year + "<br>" + timeString;
+    if(day < 10) {
+        datString = "0" + day;
+    }
     
-    window.setTimeout("tick();", 1000);
+    if(month < 10) {
+        monthString = "0" + month
+    }
+    
+    clock.innerHTML =dayString + ", " + datString + "." + monthString + "." + year;
+
 }
+
+
 
 window.onload = init;
 window.onbeforeunload = close();

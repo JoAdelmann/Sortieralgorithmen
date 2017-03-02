@@ -13,17 +13,17 @@ function tick() {
     var day = today.getDate();
     var month = today.getMonth() + 1;
     var year = today.getFullYear();
-    var hour = today.getHours();
+    var datString = "";
+    var monthString = "";
+ /*   var hour = today.getHours();
     var minutes = today.getMinutes();
     var seconds = today.getSeconds();
-    var dayNumber = today.getDay();
-    
-    
+    */var dayNumber = today.getDay();/*
+       
     var hourString = "";
     var minutesString = "";
     var secondsString = "";
-    var dayString = dayArray[dayNumber];
-    
+    */var dayString = dayArray[dayNumber];/*
     
     if(hour < 10) {
         hourString = "0" + hour;
@@ -41,16 +41,25 @@ function tick() {
         secondsString = seconds;
     }
     
-    var timeString = hourString + ":" + minutesString + ":" + secondsString + " Uhr";
+    var timeString = hourString + ":" + minutesString + ":" + secondsString + " Uhr";*/
     
-    clock.innerHTML = dayString + ", " + day + "." + month + "." + year + "  |  " + timeString;
+    if(day < 10) {
+        datString = "0" + day;
+    }
     
-    window.setTimeout("tick();", 1000);
+    if(month < 10) {
+        monthString = "0" + month
+    }
+    
+    clock.innerHTML =dayString + ", " + datString + "." + monthString + "." + year;
+
 }
 
 function init() {
     clock = document.getElementById("time");
     tick();
 }
+
+
 
 window.onload = init;

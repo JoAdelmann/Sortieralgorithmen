@@ -1,7 +1,7 @@
 <html>
     <head>
         
-        <title>Sortieralgorithmen-Johannes Adelmann</title>
+        <title>Mergesort</title>
         <meta content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../styles/index.css">
@@ -11,7 +11,7 @@
     </head>
     <body>
         <section class="topSection">
-            <div id="logo"><a href="../docs/index.html"><img src="../images/Logomakr_77PqKi.png"></a></div>
+           <div id="logo"><a href="../docs/index.html"><img src="../images/Logomakr_77PqKi.png"></a></div>
             <div id="topMiddle">
                 <nav class="menu">
                     <ul>
@@ -33,30 +33,35 @@
                     </ul>
                 </nav>
             </div>
-            <div id="topRight"></div>
+            <div id="topRight">
+                
+            </div>
         </section>
         
         <section class="middleSection">
             <div class="middleMiddle">
-                <h1>Herzlich Willkommen!</h1>
-                <p class="justify">Sortieralgorithmen, auch Sortierverfahren genannt, lassen sich auf der ganzen Welt finden. <br> Sie werden meistens gebraucht, um Dinge in einer gewissen Reihenfolge anzuorden, <br> damit man jene z.B. leichter finden kann. </p>
+                <h1>Der Mergesort</h1>
+                <p class="justify"> Der Mergesort zählt zu den schnellsten Sortieralgorithmen.</p>
                 <br>
-
-                Ein unsortiertes Array...
+                <h2>Verfahren</h2>
+                <img src="../images/mergeSort/step1.PNG" class="image"> <br>
+                <p>Angenommen das obere Array soll nun sortiert werden. <br> 
+                </p>
+                <p>Zunächst bildet man Zweierpartitionen und sortiert diese. <br>
+                </p>
+                <img class="image" src="../images/mergeSort/step2.png"> <br>
+                <p>Diese fasst man nun zu Viererpartitionen zusammen und sortiert sie ebenfalls. </p> <br>
+                <img class="image" src="../images/mergeSort/step3.png"> <br>
+                <p>Zuletzt werden die Vierepartitonen zu einer Achterpartition zusammengefasst und sortiert. <br>
+                Die verbleibende Zweierpartition wird dann einsortiert.</p>
                 <br>
-                <img src="../images/insertionSort/step1.PNG" class="image"/>
-                <br>
-                
-                <img src="../images/sorted.png" class="image"/>
-                <br>
-                ...sieht sortiert gleich besser aus.
-                
+                <img src="../images/sorted.png" class="image"><br>
             </div>    
         </section>
         
-        <footer class="bottomSection">
+        <section class="bottomSection" >
             <div id="copyright">&copy; 2017 - Johannes Adelmann</div>
             <div id="time"></div>
-        </footer>
+        </section>
     </body>
 </html>

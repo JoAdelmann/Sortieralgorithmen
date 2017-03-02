@@ -14,34 +14,31 @@
    </head>
    
    <body>
-       <div class="topSection">
-           <div id="logo"><a href="../docs/index.html"><img src="../images/Logo1111.png" title="zurück zum Start" alt="zurück zum Start"></a></div>
+       <header class="topSection">
+           <div id="logo"><a href="../docs/index.html"><img src="../images/Logomakr_77PqKi.png" title="zurück zum Start" alt="zurück zum Start"></a></div>
            <div id="topMiddle">
-               <ul class="navigation">
-                   <li><a href="#" onclick="openHelp(); return false;">Hilfe</a></li>
-                   <li><a href="#" onclick="clearBtn(); return false;">Clear</a></li>
-                   <li><a href="vlab.html">Reset</a></li>
-                   <li><a href="#" title="Randomize the array" >Würfeln</a>
-                       <ul class="subnavigation">
-                           <li><a href="#" onclick="randomizeButton();return false;">Zufällig</a></li>
-                           <li><a href="#" onclick="invertButton();return false;">Absteigend</a></li>
-                       </ul></li>
-                   <li><a href="#" title="Select an algorithm">Sortieralgorithmen</a>
-                       <ul class="subnavigation">
-                           <li><a href="#" onclick="selectAlgo(0); return false;">Bubblesort</a></li>
-                           <li><a href="#"  onclick="selectAlgo(1); return false;">SelectionSort</a></li>
-                           <li><a href="#"  onclick="selectAlgo(2); return false;">InsertionSort</a></li>
-                           <li><a href="#"  onclick="selectAlgo(3); return false;">MergeSort</a></li>
-                           <li><a href="#"  onclick="selectAlgo(4); return false;">QuickSort</a></li>
-                       </ul>
-                   </li>
-                   <li id="animateBtn"><a href="#" title="Full Animation" onclick="fullAnimation(); return false;">Animieren</a></li>
-                   <li id="singleStepBtn"><a href="#" title="Single Step" onclick="singleStep(); return false;">Einzelschritt</a></li>
-                   <li id="nextBtn"><a href="#" title="Weiter" onclick="selectNext();return false;">Weiter</a></li>
-               </ul>
+               <nav class="menu">
+                <ul>
+                    <li><a href="#" title="Anleitung" onclick="openHelp();">Anleitung</a></li>
+                    <li><a href="#" title="Erzeuge ein Array" >Würfeln</a>
+                        <ul>
+                            <li><a href="#" onclick="randomizeButton();return false;">Zufällig</a></li>
+                            <li><a href="#" onclick="invertButton();return false;">Absteigend</a></li>
+                        </ul></li>
+                    <li><a href="#" title="Wähle eine Algorithmus aus">Sortieralgorithmen</a>
+                        <ul>
+                            <li><a href="#" onclick="selectAlgo(0); return false;">BubbleSort</a></li>
+                            <li><a href="#"  onclick="selectAlgo(1); return false;">SelectionSort</a></li>
+                            <li><a href="#"  onclick="selectAlgo(2); return false;">InsertionSort</a></li>
+                            <li><a href="#"  onclick="selectAlgo(3); return false;">MergeSort</a></li>
+                            <li><a href="#"  onclick="selectAlgo(4); return false;">QuickSort</a></li>
+                        </ul>
+                    </li>
+                </ul>
+               </nav>
            </div>
-           <div id="topRight"><div id="time"></div></div>  
-       </div>
+           <div id="topRight"></div>  
+       </header>
        
        <div class="middle">
            <div id="middleLeft">
@@ -111,8 +108,14 @@
            </div>
        </div>
        
-  <div class="bottomSection">
-   </div>
+  <footer class="bottomSection">
+      <button onclick="clearBtn();">Clear</button>
+      <button onclick="reloadVlab();">Reset</button>
+      <button id="animateBtn" onclick="fullAnimation();">Animieren</button>
+      <button id="singleStepBtn" onclick="singleStep();">Einzelschritt</button>
+      <button id="nextBtn" onclick="selectNext();">Weiter</button>
+      <div id="time"></div>
+   </footer>
       
    </body>
 </html>

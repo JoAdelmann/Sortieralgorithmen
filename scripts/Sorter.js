@@ -93,8 +93,8 @@ Sorter.prototype.bubbleSortSingleStep = function() {
 
     if(this.i < this.numOfUnsElems) {
         this.selectElem("outerFor").style.backgroundColor= "green";
-        this.selectElem("innerFor").style.backgroundColor= "grey";
-        this.selectElem("innerIf").style.backgroundColor= "grey";
+        this.selectElem("innerFor").style.backgroundColor= "#1a1a1a";
+        this.selectElem("innerIf").style.backgroundColor= "#1a1a1a";
 
         var elemI = this.selectBox(this.i);
         var textElemI = this.selectBarText(this.i);
@@ -107,9 +107,9 @@ Sorter.prototype.bubbleSortSingleStep = function() {
         }
 
         if(this.j < this.numOfUnsElems) {
-            this.selectElem("outerFor").style.backgroundColor= "grey";
+            this.selectElem("outerFor").style.backgroundColor= "#1a1a1a";
             this.selectElem("innerFor").style.backgroundColor= "green";
-            this.selectElem("innerIf").style.backgroundColor= "grey";
+            this.selectElem("innerIf").style.backgroundColor= "#1a1a1a";
             var elemJ = this.selectBox(this.j);
             var textElemJ = this.selectBarText(this.j);
             var valueJ = parseInt(textElemJ.innerHTML);
@@ -117,9 +117,9 @@ Sorter.prototype.bubbleSortSingleStep = function() {
             elemJ.style.backgroundColor = "red";
 
             if(valueI >= valueJ) {
-              this.selectElem("innerFor").style.backgroundColor= "grey";
+              this.selectElem("innerFor").style.backgroundColor= "#1a1a1a";
               this.selectElem("innerIf").style.backgroundColor= "green";
-              this.selectElem("outerIf").style.backgroundColor= "grey";
+              this.selectElem("outerIf").style.backgroundColor= "#1a1a1a";
               this.swapElems(this.i,this.j, elemI, textElemI, elemJ, textElemJ);
             }
             this.j++;
@@ -142,7 +142,7 @@ Sorter.prototype.selectionSortSingleStep = function() {
         if(this.i < 10) {
             this.minIndex = this.findMinIndex(this.i);
             this.selectElem("findMinIndex").style.backgroundColor = "red";
-            this.selectElem("swapElems").style.backgroundColor = "grey";
+            this.selectElem("swapElems").style.backgroundColor = "#1a1a1a";
             if(this.i > 0) {
                 var beforeMinIndex = this.findMinIndex(this.i-1);
                 var elem = this.selectBox(beforeMinIndex);
@@ -201,14 +201,14 @@ Sorter.prototype.selectionSortSingleStep = function() {
 
 Sorter.prototype.insertionSortSingleStep = function() {
     this.selectElem("insertionSort").style.visibility = "visible";
-    this.selectElem("forLoop").style.backgroundColor = "grey";
-    this.selectElem("temp").style.backgroundColor = "grey";
-    this.selectElem("tempEqArrayI").style.backgroundColor = "grey";
-    this.selectElem("varJEqI").style.backgroundColor = "grey";
-    this.selectElem("while").style.backgroundColor = "grey";
-    this.selectElem("arrayJEqArrayJMO").style.backgroundColor = "grey";
-    this.selectElem("jMM").style.backgroundColor = "grey";
-    this.selectElem("arrayJEqTemp").style.backgroundColor = "grey";
+    this.selectElem("forLoop").style.backgroundColor = "#1a1a1a";
+    this.selectElem("temp").style.backgroundColor = "#1a1a1a";
+    this.selectElem("tempEqArrayI").style.backgroundColor = "#1a1a1a";
+    this.selectElem("varJEqI").style.backgroundColor = "#1a1a1a";
+    this.selectElem("while").style.backgroundColor = "#1a1a1a";
+    this.selectElem("arrayJEqArrayJMO").style.backgroundColor = "#1a1a1a";
+    this.selectElem("jMM").style.backgroundColor = "#1a1a1a";
+    this.selectElem("arrayJEqTemp").style.backgroundColor = "#1a1a1a";
 
     this.selectElem("forLoop").style.backgroundColor = "green";
     if(this.k < this.numOfUnsElems) {
@@ -227,9 +227,9 @@ Sorter.prototype.insertionSortSingleStep = function() {
         this.selectElem("temp").style.backgroundColor = "green";
         this.selectElem("tempEqArrayI").style.backgroundColor = "green";
         this.selectElem("varJEqI").style.backgroundColor = "green";
-        this.selectElem("while").style.backgroundColor = "grey";
-        this.selectElem("arrayJEqArrayJMO").style.backgroundColor = "grey";
-        this.selectElem("jMM").style.backgroundColor = "grey";
+        this.selectElem("while").style.backgroundColor = "#1a1a1a";
+        this.selectElem("arrayJEqArrayJMO").style.backgroundColor = "#1a1a1a";
+        this.selectElem("jMM").style.backgroundColor = "#1a1a1a";
         this.selectElem("arrayJEqTemp").style.backgroundColor = "green";
 
         if(this.j > 0 && this.valueJMO > this.tempValueK) {
@@ -237,14 +237,14 @@ Sorter.prototype.insertionSortSingleStep = function() {
 
             this.j--;
 
-            this.selectElem("forLoop").style.backgroundColor = "grey";
-            this.selectElem("temp").style.backgroundColor = "grey";
-            this.selectElem("tempEqArrayI").style.backgroundColor = "grey";
-            this.selectElem("varJEqI").style.backgroundColor = "grey";
+            this.selectElem("forLoop").style.backgroundColor = "#1a1a1a";
+            this.selectElem("temp").style.backgroundColor = "#1a1a1a";
+            this.selectElem("tempEqArrayI").style.backgroundColor = "#1a1a1a";
+            this.selectElem("varJEqI").style.backgroundColor = "#1a1a1a";
             this.selectElem("while").style.backgroundColor = "green";
             this.selectElem("arrayJEqArrayJMO").style.backgroundColor = "green";
             this.selectElem("jMM").style.backgroundColor = "green";
-            this.selectElem("arrayJEqTemp").style.backgroundColor = "grey";  
+            this.selectElem("arrayJEqTemp").style.backgroundColor = "#1a1a1a";  
         }
         this.k++;
     }
@@ -257,7 +257,7 @@ Sorter.prototype.insertionSortSingleStep = function() {
 Sorter.prototype.mergeSortSingleStep = function() {
     this.selectElem("mergeSort").style.visibility = "visible";
     if(this.l == 2) {
-        this.selectElem("sortTwo").style.backgroundColor = "grey";
+        this.selectElem("sortTwo").style.backgroundColor = "#1a1a1a";
         if(this.i < 9) {
             this.selectElem("sortTwo").style.backgroundColor = "green";
             var elemI = this.selectBox(this.i);
@@ -284,8 +284,8 @@ Sorter.prototype.mergeSortSingleStep = function() {
         }
     }
     else if(this.l == 4) {
-        this.selectElem("mergeTwo").style.backgroundColor = "grey";
-        this.selectElem("sortFour").style.backgroundColor = "grey";
+        this.selectElem("mergeTwo").style.backgroundColor = "#1a1a1a";
+        this.selectElem("sortFour").style.backgroundColor = "#1a1a1a";
         if(this.i < 8) {
             this.selectElem("sortFour").style.backgroundColor = "green";
             var elemI = this.selectBox(this.i);
@@ -309,13 +309,13 @@ Sorter.prototype.mergeSortSingleStep = function() {
 
             if(this.i == 2) {
                 this.selectElem("mergeFour").style.backgroundColor = "green";
-                this.selectElem("sortFour").style.backgroundColor = "grey";
+                this.selectElem("sortFour").style.backgroundColor = "#1a1a1a";
                 this.clearInOrder(0, 3);
                 this.i = 4;
             }
             else if(this.i == 5) {
                 this.selectElem("mergeFour").style.backgroundColor = "green";
-                this.selectElem("sortFour").style.backgroundColor = "grey";
+                this.selectElem("sortFour").style.backgroundColor = "#1a1a1a";
                 this.clearInOrder(4, 7);
                 this.l+=2;
                 this.i = 0;
@@ -326,7 +326,7 @@ Sorter.prototype.mergeSortSingleStep = function() {
         }
     }
     else if(this.l == 6) {
-        this.selectElem("mergeFour").style.backgroundColor = "grey";
+        this.selectElem("mergeFour").style.backgroundColor = "#1a1a1a";
         if(this.i<4) {
             this.selectElem("sortEight").style.backgroundColor = "green";
             var elemI = this.selectBox(this.i);
@@ -350,7 +350,7 @@ Sorter.prototype.mergeSortSingleStep = function() {
             this.i++;
         }
         else {
-            this.selectElem("sortEight").style.backgroundColor = "grey";
+            this.selectElem("sortEight").style.backgroundColor = "#1a1a1a";
             this.selectElem("mergeEight").style.backgroundColor = "green";
             this.clearInOrder(0, 7);
             this.i = 0;
@@ -359,7 +359,7 @@ Sorter.prototype.mergeSortSingleStep = function() {
     }
     else {
        if(this.i<2) {
-           this.selectElem("mergeEight").style.backgroundColor = "grey";
+           this.selectElem("mergeEight").style.backgroundColor = "#1a1a1a";
            this.selectElem("sortRest").style.backgroundColor = "green";
            var elemI = this.selectBox(this.i);
            var textElemI = this.selectBarText(this.i);
@@ -381,7 +381,7 @@ Sorter.prototype.mergeSortSingleStep = function() {
            this.i++;
        }
         else {
-            this.selectElem("sortRest").style.backgroundColor = "grey";
+            this.selectElem("sortRest").style.backgroundColor = "#1a1a1a";
             this.selectElem("mergeRest").style.backgroundColor = "green";
             this.clearInOrder(0,9);
             this.numOfUnsElems = 0;
@@ -472,7 +472,7 @@ Sorter.prototype.quickSortSingleStep = function() {
     }
     else if(this.currentPivotVal == 8) {
         this.selectElem("sortRight").style.backgroundColor = "green";
-        this.selectElem("sortLeft").style.backgroundColor = "grey";
+        this.selectElem("sortLeft").style.backgroundColor = "#1a1a1a";
         this.fillLessAndGreater(this.currentPivotVal);
 
         for(var k=0; k<this.lessThenPivot.length; k++) {

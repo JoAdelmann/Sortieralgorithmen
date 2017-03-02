@@ -1,25 +1,13 @@
-html {
-    background-color: black;
-    padding: 0;
-    margin: 0;
-}
-
-body {
-    padding: 0;
-    margin: 0;
-}
-
 .box {
     width: 30px;
     bottom: 2;
     background-color: cadetblue;
     position: absolute;
-    border-style:ridge;
+    border-style: none;
     border-width: 5px;
     text-align: center;
     
 }
-
 
 .barText {
     position: absolute;
@@ -29,28 +17,15 @@ body {
     height: 15;
 }
 
-.topSection {
-    position: relative;
-    height: 15%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    left: 0;
-    right: 0;
-    top: 0;
-    background-image: linear-gradient(to bottom, black, deepskyblue);
-    
-}
-
 .middle {
     position: absolute;
-    height: 70%;
+    height: 80%;
     width: 100%;
-    top: 15%;
-    bottom: 15%;
+    top: 10%;
+    bottom: 10%;
     padding: 0;
     margin: 0;
+    background-color: black;
 }
 
 #middleLeft {
@@ -58,15 +33,17 @@ body {
     left: 0;
     width: 70%;
     height: 100%;
+    background-color: black;
 }
 
 #middleRight {
     font: bold 15px/15px sans-serif;
     position: absolute;
     left: 70%;
-    width: 28%;
+    width: 30%;
     height: 100%;
-    background-color: gray;
+    background: #1a1a1a;
+    color: darkorange;
 }
 
 #middleRightTop {
@@ -108,6 +85,30 @@ body {
   -o-transition: 2s;
   transition: 2s;
 }
+
+button {
+    background-color: darkorange; 
+    border: 5px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font: bold 15px/15px sans-serif;
+    display:inline-block;
+    width: 12%;
+    height: 50%;
+    position: relative;
+    top: 20%;
+}
+
+
+button:hover {
+    background-color: #1b96fe;
+    cursor: pointer;
+}
+
+
+
+
 
 
 
